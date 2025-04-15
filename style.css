@@ -1,0 +1,209 @@
+* {             /* Por padrão, alguns navegadores aplicam alguns estilos, sempre começar as aplicações zerando os estilos, nesse caso as aplicações abaixo*/
+    margin: 0;
+    padding: 0;             
+    box-sizing: border;
+}
+
+.logo-mario{
+    height: 200px;
+
+}
+button {
+    color: white;
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+} 
+
+button:hover {
+    color:black;
+    background-color: #18D80F;
+    transition: 1s;
+}
+
+.imagem-mario-luigi {
+        height: 500px;
+}
+
+body {
+    height: 100vh;
+}
+    .caixa-mae {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 100px;
+    }
+
+
+    .caixa-principal {
+                
+        width: 40%;
+    }
+
+
+
+/* Para ocupar a tela inteira usamos a unidade vh. Ex.: 100vh, WIDHT:100vw; vai ocupar a tela inteira, independente do tamanho do monitor
+- align-itens: é o alinhamento dos intens. Esse alinhamento é no eixo vertical.
+-justify-content: alinhamento dos intes no eixo horizontal
+- margin: espaçamento externo
+- padding: espaçamento interno
+- space-between: cria espaço entre os itens
+- CTRL+ESPAÇO: abre as opções.
+*SÓ CONSIGO USAR ESSAS CONFIGURAÇÕES SE O DISPLAY:FLEX TIVER ATIVADO 
+- Quando determino o "position=fixed', consigo determinar qual ponto da minha tela o objeto irá ficar,
+através de algumas propriedades: top (cima), bottom (baixo), left (esquerda), right (direita)
+*/
+
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); /*Gradient CSS para acessar o código das cores*/
+    position: fixed;
+    top: 0; 
+}
+
+.texto-branco {
+    color: white;
+
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}                   /* Precisamos gerar um link em algum site gratuito e colocar no html. <a href=link do whatsapp. e criar uma class para estilizar no css.
+                    Outra forma que é como foi feito agora, é colocar a class depois a tag, nesse casso o css vai procurar nessa class imagem ou imagens e vai estilizar nas configurações descritas.*/
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;  /* GAP - é o distanciamento entre os itens.*/
+    margin: 30px;  /* Margin e padding: se não colocar a direção que será alterado, ele altera para as quatro direções*/
+
+}
+
+.header img {
+    height: 60px;
+}
+
+.header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #c51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+
+/* Eventos: É quando eu tomo alguma ação, e através dessa outra ação, acontece outra coisa. Ex.: Levar o cursor do mouse até um link, e ele mudar de cor. Nesse caso ele aumenta a fonte e muda a cor*/
+
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    left: -300px;
+    top: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F;  /* É quando temos um input, e clicamos nesse input e a borda muda a cor*/
+}
+
+textarea {
+    height: 100px;
+    width: 270px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18D80F;
+}
+
+.mascara-formulario {
+    visibility:  hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+}
+
+/* Media Query -> Usamos essa configuração para deixar o site responsivo, ou seja, se adapta
+tanto em computadores, como em celulares.
+Para analisar como vai ficar o site, precisamos entrar no menu inspecionar.
+* Configuramos do width (largura) para quando a tela atingir determinado pixel, mudar o css!!
+
+max -> Valor menor que npx, aplica o css do MEDIA
+min -> Valor maior que npx, aplica o css do MEDIA*/
+
+@media (max-width: 1100px) {
+    p {
+        display: none;
+    }
+    
+    .caixa-mae {
+        flex-direction: column;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+   .caixa-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } 
+    .imagem-mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header img {
+        display: none;
+    }
+    .header a{
+        font-size: 20px;
+    }
+}

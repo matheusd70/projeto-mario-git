@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!--Estou avisando ao navegador que a versão hmtl é a mais atualizada-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!--Padrão de caracteres do site-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Essa linha fala que nosso site é compatível como computador e celular -->
+    <title>Mario Bros</title> <!--Titulo do site-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Adcionando esse link, estou avisando ao html onde vai está meu arquivo de estilos-->
+</head>
+
+    <div class="mascara-formulario" onclick="esconderForm ()"></div>
+
+<div class="header">
+    <img src="./img/logo-header.png" alt="logo mario"/> 
+    <a>Home</a>
+    <a href="nossos serviços.html" target="_blank">Nossos Serviços</a>
+    <a>Fale Conosco</a>
+</div>
+
+<body>
+    <div class="caixa-mae">
+        <div class="caixa-principal">
+
+            <img src="./img/logo.png" alt="logo do mario bros" alt="logo mario e luigi" class="logo-mario" />
+            <div class="texto-branco">
+            <p>Encanadores Mario & Luigi - Resolvemos seus problemas hidráulicos com estilo!</p>
+            <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
+                ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
+                vocês
+                os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+            </div>
+    
+            <button onclick="mostrarForm()">Entre em contato</button>
+        </div>
+
+        <div>
+            <img src="./img/mario.png" alt="logo mario e luigi" class="imagem-mario-luigi">
+        </div>
+    
+
+    </div>
+   
+
+    <div class="caixa-video">
+            <video src="./img/video.mp4" autoplay muted loop></video>
+            <div class="mascara"></div>
+    </div>
+
+    <a href="https://wa.me/5547998525489?text=Algum%20problema%20residencial%3F%20Chame%20os%20irm%C3%A3os%20Luigi%20e%20M%C3%A1rio!" class="link-whatsapp"> 
+        <img src="img/whatsapp.png" alt="link para owhatsapp"/>
+
+    </a> 
+
+    <form class="formulario-fale-conosco">
+        <input placeholder="Seu Nome">
+        <input placeholder="Seu Telefone">
+        <textarea placeholder="Digite seu problema aqui"></textarea>
+        <button>Pedir Orçamento</button>
+    </form>
+   
+</body>
+<!-- EXISTEM 2 JEITOS DE ESTILIZAR MEU SITE
+     1ª Forma:
+     <style>
+        p {
+            color: red; (; indica que finalizei o que estava alterando)
+            font-size: 42px; (altera o tamanho da fonte)
+        }
+
+        button{
+            color: blue;
+            background-color: blue; (muda a cor de fundo)
+
+        }
+     </style>
+     
+     Segundo jeito é criar um arquivo separado, para estilizar no css
+    -->
+
+    <script src="scripts.js"></script>
+
+
+</html>
+
+<!--Quando temos mais de um elemento que preciamos modicar algum parâmetro, é necessário criar classes
+ob.: classes não pode ter espaço, usamos - traço
+1° Passo é criar as classes no html, para depois modificar no css.
+No CSS o procedimento é: .(ponto + nome da classe)
+-->
